@@ -1,0 +1,9 @@
+staging:
+  source: build
+  user: mydeployuser
+  rsync_options:
+    - -og
+    - '--chown=www-data:www-data'
+    - --rsync-path="sudo rsync"
+  domain: 'www.sample.com'
+  target_dir: '/var/www/mysite'
